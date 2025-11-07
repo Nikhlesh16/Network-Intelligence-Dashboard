@@ -13,37 +13,19 @@
     <header class="dashboard-header">
         <div class="header-content">
             <div class="logo-section">
-                <i class="fas fa-network-wired"></i>
+                <i class="fas fa-search"></i>
                 <h1>Easy Search</h1>
             </div>
             <div class="header-actions">
                 <div class="refresh-status" id="autoRefresh">
-                    <i class="fas fa-sync-alt"></i>
-                    <span>Last updated: <span id="lastUpdate">Nov 7, 2025 10:30 AM</span></span>
-                    <span class="live-indicator">● LIVE</span>
+                    <span>Updated: <span id="lastUpdate">Nov 7, 2025</span></span>
                 </div>
-                <button class="icon-btn" id="collaborationBtn" title="Collaboration & Comments">
-                    <i class="fas fa-comments"></i>
-                    <span class="notification-badge">5</span>
-                </button>
-                <button class="icon-btn" title="Notifications">
-                    <i class="fas fa-bell"></i>
-                    <span class="notification-badge">3</span>
-                </button>
-                <button class="icon-btn" id="syncBtn" title="Sync Across Dashboards">
-                    <i class="fas fa-sync"></i>
-                </button>
                 <button class="icon-btn" title="Settings">
                     <i class="fas fa-cog"></i>
                 </button>
                 <div class="user-profile">
                     <i class="fas fa-user-circle"></i>
-                    <span>Admin User</span>
-                    <select class="role-selector" id="roleSelector">
-                        <option value="executive">Executive</option>
-                        <option value="manager">Manager</option>
-                        <option value="contracting">Contracting</option>
-                    </select>
+                    <span>Admin</span>
                 </div>
             </div>
         </div>
@@ -54,103 +36,28 @@
         <div class="nav-container">
             <button class="tab-btn active" data-tab="executive">
                 <i class="fas fa-chart-line"></i>
-                Network Executive
+                Overview
             </button>
             <button class="tab-btn" data-tab="manager">
                 <i class="fas fa-map-marked-alt"></i>
-                Network Manager
+                Regional View
             </button>
             <button class="tab-btn" data-tab="contracting">
                 <i class="fas fa-handshake"></i>
-                Contracting Team
+                Contracts
             </button>
             <button class="tab-btn" data-tab="pipeline">
                 <i class="fas fa-project-diagram"></i>
-                Data Pipeline
+                Data Flow
             </button>
             <button class="tab-btn" data-tab="metrics">
                 <i class="fas fa-trophy"></i>
-                Success Metrics
+                Metrics
             </button>
         </div>
     </nav>
 
     <div class="dashboard-container">
-        <!-- Collaboration Panel -->
-        <aside class="collaboration-panel" id="collaborationPanel">
-            <div class="panel-header">
-                <h3><i class="fas fa-comments"></i> Collaboration Center</h3>
-                <button class="panel-close" id="closeCollabPanel">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="collab-tabs">
-                <button class="collab-tab active" data-collab-tab="messages">Messages</button>
-                <button class="collab-tab" data-collab-tab="flags">Flags (3)</button>
-                <button class="collab-tab" data-collab-tab="approvals">Approvals (2)</button>
-            </div>
-            <div class="collab-content">
-                <div class="collab-tab-content active" id="messages-tab">
-                    <div class="message-thread">
-                        <div class="message">
-                            <div class="message-header">
-                                <strong>Sarah Chen - Contracting</strong>
-                                <span class="timestamp">2 hours ago</span>
-                            </div>
-                            <p>Need executive approval for Metro Health rate reduction proposal. Projected $3.2M savings.</p>
-                            <button class="btn-small">Reply</button>
-                        </div>
-                        <div class="message">
-                            <div class="message-header">
-                                <strong>Michael Torres - Manager</strong>
-                                <span class="timestamp">4 hours ago</span>
-                            </div>
-                            <p>Southwest cardiology gap critical. Flagged 3 providers for contracting team review.</p>
-                            <button class="btn-small">View Details</button>
-                        </div>
-                    </div>
-                    <div class="message-input">
-                        <input type="text" placeholder="Type a message..." class="collab-input">
-                        <button class="btn-send"><i class="fas fa-paper-plane"></i></button>
-                    </div>
-                </div>
-                <div class="collab-tab-content" id="flags-tab">
-                    <div class="flag-list">
-                        <div class="flag-item urgent">
-                            <i class="fas fa-flag"></i>
-                            <div class="flag-details">
-                                <strong>Metro Health System</strong>
-                                <span>Flagged by: Network Manager</span>
-                                <p>Rate 14% above market - needs negotiation</p>
-                            </div>
-                            <button class="btn-action">Review</button>
-                        </div>
-                        <div class="flag-item warning">
-                            <i class="fas fa-flag"></i>
-                            <div class="flag-details">
-                                <strong>SW Cardiology Gap</strong>
-                                <span>Flagged by: Network Manager</span>
-                                <p>62% adequacy - urgent provider recruitment</p>
-                            </div>
-                            <button class="btn-action">Assign</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="collab-tab-content" id="approvals-tab">
-                    <div class="approval-list">
-                        <div class="approval-item pending">
-                            <h4>Contract Amendment - Regional Care</h4>
-                            <p>5% rate reduction proposal</p>
-                            <div class="approval-actions">
-                                <button class="btn-approve">Approve</button>
-                                <button class="btn-reject">Reject</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </aside>
-
         <!-- Collapsible Sidebar -->
         <aside class="sidebar" id="sidebar">
             <button class="sidebar-toggle" id="sidebarToggle">
@@ -159,7 +66,7 @@
             
             <div class="sidebar-content">
                 <section class="filter-section">
-                    <h3><i class="fas fa-filter"></i> Global Filters</h3>
+                    <h3><i class="fas fa-filter"></i> Filters</h3>
                     
                     <div class="filter-group">
                         <label>Region</label>
@@ -174,67 +81,21 @@
                     </div>
 
                     <div class="filter-group">
-                        <label>Specialty</label>
-                        <select class="filter-select" id="specialtyFilter">
-                            <option value="all">All Specialties</option>
-                            <option value="primary">Primary Care</option>
-                            <option value="cardiology">Cardiology</option>
-                            <option value="orthopedics">Orthopedics</option>
-                            <option value="oncology">Oncology</option>
-                            <option value="neurology">Neurology</option>
-                        </select>
-                    </div>
-
-                    <div class="filter-group">
-                        <label>Plan Type</label>
-                        <select class="filter-select" id="planFilter">
-                            <option value="all">All Plans</option>
-                            <option value="hmo">HMO</option>
-                            <option value="ppo">PPO</option>
-                            <option value="epo">EPO</option>
-                            <option value="pos">POS</option>
-                        </select>
-                    </div>
-
-                    <div class="filter-group">
-                        <label>Provider System</label>
-                        <select class="filter-select" id="providerFilter">
-                            <option value="all">All Systems</option>
-                            <option value="system-a">Healthcare System A</option>
-                            <option value="system-b">Healthcare System B</option>
-                            <option value="system-c">Healthcare System C</option>
-                            <option value="independent">Independent</option>
-                        </select>
-                    </div>
-
-                    <div class="filter-group">
                         <label>Time Period</label>
                         <select class="filter-select" id="timeFilter">
                             <option value="ytd">Year to Date</option>
                             <option value="q4">Q4 2025</option>
                             <option value="q3">Q3 2025</option>
                             <option value="12m">Last 12 Months</option>
-                            <option value="24m">Last 24 Months</option>
                         </select>
                     </div>
 
                     <button class="btn-primary apply-filters">
-                        <i class="fas fa-check"></i> Apply Filters
+                        <i class="fas fa-check"></i> Apply
                     </button>
                     <button class="btn-secondary reset-filters">
                         <i class="fas fa-redo"></i> Reset
                     </button>
-                </section>
-
-                <section class="quick-links">
-                    <h3><i class="fas fa-bolt"></i> Quick Insights</h3>
-                    <ul>
-                        <li><a href="#"><i class="fas fa-exclamation-circle"></i> High Risk Areas</a></li>
-                        <li><a href="#"><i class="fas fa-trophy"></i> Top Performers</a></li>
-                        <li><a href="#"><i class="fas fa-chart-bar"></i> Cost Trends</a></li>
-                        <li><a href="#"><i class="fas fa-users"></i> Provider Network</a></li>
-                        <li><a href="#"><i class="fas fa-file-contract"></i> Active Contracts</a></li>
-                    </ul>
                 </section>
 
                 <section class="data-status">
@@ -247,10 +108,6 @@
                         <span>Market Rates</span>
                         <span class="status-badge success">Current</span>
                     </div>
-                    <div class="status-item">
-                        <span>Provider Directory</span>
-                        <span class="status-badge warning">1 day old</span>
-                    </div>
                 </section>
             </div>
         </aside>
@@ -260,16 +117,10 @@
             <!-- Executive Dashboard Tab -->
             <div class="tab-content active" id="executive-tab">
                 <div class="tab-header">
-                    <h2>Executive Overview</h2>
+                    <h2>Overview</h2>
                     <div class="export-actions">
                         <button class="btn-export" title="Export to PDF">
-                            <i class="fas fa-file-pdf"></i> PDF
-                        </button>
-                        <button class="btn-export" title="Export to PowerPoint">
-                            <i class="fas fa-file-powerpoint"></i> PPT
-                        </button>
-                        <button class="btn-export" title="Export to CSV">
-                            <i class="fas fa-file-csv"></i> CSV
+                            <i class="fas fa-file-pdf"></i> Export
                         </button>
                     </div>
                 </div>
@@ -278,123 +129,78 @@
                 <div class="kpi-grid">
                     <div class="kpi-card">
                         <div class="kpi-header">
-                            <h3>Average Rate vs Market</h3>
-                            <i class="fas fa-info-circle tooltip-icon" title="Comparison of our contracted rates against market benchmarks"></i>
+                            <h3>Rate vs Market</h3>
                         </div>
                         <div class="kpi-value positive">
                             <span class="value">8.5%</span>
                             <span class="label">Above Market</span>
                         </div>
                         <div class="kpi-indicator red">
-                            <i class="fas fa-arrow-up"></i> High Cost Alert
+                            <i class="fas fa-arrow-up"></i> High Cost
                         </div>
-                        <div class="kpi-chart" id="rateVsMarketChart"></div>
                     </div>
 
                     <div class="kpi-card">
                         <div class="kpi-header">
-                            <h3>PMPM Cost Trend</h3>
-                            <i class="fas fa-info-circle tooltip-icon" title="Per Member Per Month cost trajectory over time"></i>
+                            <h3>Cost Per Member</h3>
                         </div>
                         <div class="kpi-value">
-                            <span class="value">$485.20</span>
-                            <span class="label">Current PMPM</span>
+                            <span class="value">$485</span>
+                            <span class="label">Monthly</span>
                         </div>
                         <div class="kpi-indicator amber">
-                            <i class="fas fa-arrow-up"></i> +2.3% YoY
+                            <i class="fas fa-arrow-up"></i> +2.3%
                         </div>
-                        <div class="kpi-chart" id="pmpmTrendChart"></div>
                     </div>
 
                     <div class="kpi-card">
                         <div class="kpi-header">
-                            <h3>Network Adequacy Score</h3>
-                            <i class="fas fa-info-circle tooltip-icon" title="Measure of network coverage meeting regulatory requirements"></i>
+                            <h3>Network Coverage</h3>
                         </div>
                         <div class="kpi-value">
                             <span class="value">92.5%</span>
-                            <span class="label">Compliance Rate</span>
+                            <span class="label">Adequacy</span>
                         </div>
                         <div class="kpi-indicator green">
-                            <i class="fas fa-check-circle"></i> Meets Standards
+                            <i class="fas fa-check-circle"></i> Good
                         </div>
-                        <div class="kpi-chart" id="adequacyScoreChart"></div>
-                    </div>
-
-                    <div class="kpi-card">
-                        <div class="kpi-header">
-                            <h3>Risk Concentration Index</h3>
-                            <i class="fas fa-info-circle tooltip-icon" title="Concentration of high-cost members across provider systems"></i>
-                        </div>
-                        <div class="kpi-value">
-                            <span class="value">0.68</span>
-                            <span class="label">Concentration Level</span>
-                        </div>
-                        <div class="kpi-indicator amber">
-                            <i class="fas fa-exclamation-triangle"></i> Moderate Risk
-                        </div>
-                        <div class="kpi-chart" id="riskConcentrationChart"></div>
-                    </div>
-
-                    <div class="kpi-card">
-                        <div class="kpi-header">
-                            <h3>Negotiation Leverage</h3>
-                            <i class="fas fa-info-circle tooltip-icon" title="Relative bargaining position based on market share and alternatives"></i>
-                        </div>
-                        <div class="kpi-value">
-                            <span class="value">7.2/10</span>
-                            <span class="label">Leverage Score</span>
-                        </div>
-                        <div class="kpi-indicator green">
-                            <i class="fas fa-thumbs-up"></i> Strong Position
-                        </div>
-                        <div class="kpi-chart" id="leverageChart"></div>
-                    </div>
-
-                    <div class="kpi-card">
-                        <div class="kpi-header">
-                            <h3>Contract Performance</h3>
-                            <i class="fas fa-info-circle tooltip-icon" title="Overall performance of contracted provider systems"></i>
-                        </div>
-                        <div class="kpi-value">
-                            <span class="value">85.3%</span>
-                            <span class="label">Quality Score</span>
-                        </div>
-                        <div class="kpi-indicator green">
-                            <i class="fas fa-star"></i> Above Target
-                        </div>
-                        <div class="kpi-chart" id="performanceChart"></div>
                     </div>
                 </div>
 
-                <!-- Comparative Analysis Section -->
-                <div class="analysis-section">
-                    <div class="section-header">
-                        <h3>Rate Comparison by Specialty</h3>
-                        <div class="view-toggle">
-                            <button class="toggle-btn active">Chart</button>
-                            <button class="toggle-btn">Table</button>
+                <!-- Charts Section -->
+                <div class="charts-grid">
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>Cost Trend</h3>
                         </div>
+                        <canvas id="costTrendChart"></canvas>
                     </div>
-                    <div class="chart-container">
-                        <canvas id="specialtyComparisonChart"></canvas>
+
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>Cost Trend</h3>
+                        </div>
+                        <canvas id="costTrendChart"></canvas>
+                    </div>
+
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>Regional Distribution</h3>
+                        </div>
+                        <canvas id="regionalChart"></canvas>
                     </div>
                 </div>
 
                 <!-- Geographic Heatmap -->
                 <div class="analysis-section">
                     <div class="section-header">
-                        <h3>Cost Variance Heatmap by Region</h3>
+                        <h3>Regional Costs</h3>
                         <div class="heatmap-legend">
-                            <span class="legend-item"><span class="legend-color" style="background: #22c55e;"></span> Below Market (-5% to -15%)</span>
-                            <span class="legend-item"><span class="legend-color" style="background: #86efac;"></span> At Market (-5% to +5%)</span>
-                            <span class="legend-item"><span class="legend-color" style="background: #fbbf24;"></span> Moderate (+5% to +10%)</span>
-                            <span class="legend-item"><span class="legend-color" style="background: #f59e0b;"></span> High (+10% to +15%)</span>
-                            <span class="legend-item"><span class="legend-color" style="background: #ef4444;"></span> Critical (>+15%)</span>
+                            <span class="legend-item"><span class="legend-color" style="background: #86efac;"></span> Low</span>
+                            <span class="legend-item"><span class="legend-color" style="background: #fbbf24;"></span> Moderate</span>
+                            <span class="legend-item"><span class="legend-color" style="background: #f59e0b;"></span> High</span>
+                            <span class="legend-item"><span class="legend-color" style="background: #ef4444;"></span> Critical</span>
                         </div>
-                        <button class="btn-secondary" onclick="expandUSMap()">
-                            <i class="fas fa-expand"></i> Full Screen
-                        </button>
                     </div>
                     <div class="heatmap-container" id="costHeatmap">
                         <div class="us-map-wrapper">
@@ -3392,14 +3198,7 @@
             <div class="footer-info">
                 <span>© 2025 Easy Search</span>
                 <span class="separator">|</span>
-                <span>Data as of November 7, 2025</span>
-                <span class="separator">|</span>
-                <span>Confidential & Proprietary</span>
-            </div>
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Use</a>
-                <a href="#">Support</a>
+                <span>Updated: November 7, 2025</span>
             </div>
         </div>
     </footer>
