@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Demo - Quick Start</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f8fafc;
+        }
+        .demo-section {
+            background: white;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1e40af;
+            border-bottom: 3px solid #1e40af;
+            padding-bottom: 15px;
+        }
+        h2 {
+            color: #334155;
+            margin-top: 30px;
+        }
+        .workflow {
+            background: #f1f5f9;
+            padding: 20px;
+            border-left: 4px solid #3b82f6;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        .step {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border-left: 3px solid #22c55e;
+        }
+        .step strong {
+            color: #1e40af;
+        }
+        .button-demo {
+            display: inline-block;
+            background: #1e40af;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .button-demo:hover {
+            background: #1e3a8a;
+        }
+        .feature-badge {
+            display: inline-block;
+            background: #22c55e;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .warning {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        code {
+            background: #e2e8f0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .demo-card {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #e2e8f0;
+        }
+        .demo-card:hover {
+            border-color: #1e40af;
+            transform: translateY(-2px);
+            transition: all 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-section">
+        <h1>🚀 Network Intelligence Dashboard - Quick Start Demo</h1>
+        <p><strong>Welcome!</strong> This guide will walk you through the integrated features of your new dashboard.</p>
+        <a href="index.html" class="button-demo">Open Dashboard →</a>
+    </div>
+
+    <div class="demo-section">
+        <h2>📋 30-Second Overview</h2>
+        <p>The dashboard has <strong>3 integrated views</strong> that work together seamlessly:</p>
+        
+        <div class="demo-grid">
+            <div class="demo-card">
+                <h3>🎯 Executive</h3>
+                <p>Strategic KPIs, outliers, and board-ready insights</p>
+            </div>
+            <div class="demo-card">
+                <h3>🗺️ Manager</h3>
+                <p>Local markets, heatmaps, and provider performance</p>
+            </div>
+            <div class="demo-card">
+                <h3>🤝 Contracting</h3>
+                <p>Rate details, negotiations, and CPT analysis</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>🎬 Demo Scenario 1: Flag a High-Cost Provider</h2>
+        
+        <div class="workflow">
+            <h3>Scenario: Network Manager identifies expensive provider</h3>
+            
+            <div class="step">
+                <strong>Step 1:</strong> Open dashboard → Click <code>Network Manager</code> tab
+            </div>
+            
+            <div class="step">
+                <strong>Step 2:</strong> Scroll to "High-Cost Outlier Providers" table
+            </div>
+            
+            <div class="step">
+                <strong>Step 3:</strong> Find "Metro Health - Cardiology" row (14.1% above market)
+            </div>
+            
+            <div class="step">
+                <strong>Step 4:</strong> Click <code>Send to Contracting</code> button
+                <span class="feature-badge">Integration!</span>
+            </div>
+            
+            <div class="step">
+                <strong>Step 5:</strong> Switch to <code>Contracting Team</code> tab
+            </div>
+            
+            <div class="step">
+                <strong>Step 6:</strong> See the provider in "Manager-Flagged Providers" section
+                <span class="feature-badge">Real-time sync!</span>
+            </div>
+            
+            <div class="step">
+                <strong>Step 7:</strong> Click <code>Expand CPT Details</code> to see specific procedures
+            </div>
+            
+            <div class="step">
+                <strong>Step 8:</strong> Click <code>Create Negotiation Packet (PPT)</code>
+            </div>
+        </div>
+        
+        <p><strong>Result:</strong> Manager flagged provider → Contracting received with full context → Ready to negotiate!</p>
+    </div>
+
+    <div class="demo-section">
+        <h2>🎬 Demo Scenario 2: Use the Collaboration Panel</h2>
+        
+        <div class="workflow">
+            <h3>Scenario: Send a message to another team member</h3>
+            
+            <div class="step">
+                <strong>Step 1:</strong> Click the <code>💬 Collaboration</code> button in top-right header
+            </div>
+            
+            <div class="step">
+                <strong>Step 2:</strong> Collaboration panel slides in from right
+            </div>
+            
+            <div class="step">
+                <strong>Step 3:</strong> Click <code>Messages</code> tab (if not already active)
+            </div>
+            
+            <div class="step">
+                <strong>Step 4:</strong> Type message in input box: "Need approval for rate reduction"
+            </div>
+            
+            <div class="step">
+                <strong>Step 5:</strong> Click <code>Send</code> button (paper plane icon)
+            </div>
+            
+            <div class="step">
+                <strong>Step 6:</strong> Switch to <code>Flags</code> tab to see flagged items
+            </div>
+            
+            <div class="step">
+                <strong>Step 7:</strong> Switch to <code>Approvals</code> tab to see pending approvals
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>🎬 Demo Scenario 3: Interactive Heatmap Drill-Down</h2>
+        
+        <div class="workflow">
+            <h3>Scenario: Identify and act on coverage gaps</h3>
+            
+            <div class="step">
+                <strong>Step 1:</strong> Go to <code>Network Manager</code> tab
+            </div>
+            
+            <div class="step">
+                <strong>Step 2:</strong> Find "Dynamic Adequacy Heatmap" section
+            </div>
+            
+            <div class="step">
+                <strong>Step 3:</strong> Hover over any cell to see tooltip with details
+            </div>
+            
+            <div class="step">
+                <strong>Step 4:</strong> Notice <strong>SW Urban</strong> cell is RED (62% - Critical)
+            </div>
+            
+            <div class="step">
+                <strong>Step 5:</strong> Click the RED cell
+            </div>
+            
+            <div class="step">
+                <strong>Step 6:</strong> Market-level filters update automatically
+                <span class="feature-badge">Auto-filter!</span>
+            </div>
+            
+            <div class="step">
+                <strong>Step 7:</strong> Click <code>Flag Critical Regions to Executive</code>
+            </div>
+            
+            <div class="step">
+                <strong>Step 8:</strong> Check collaboration panel - new flag appears!
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>🎬 Demo Scenario 4: What-If Savings Calculator</h2>
+        
+        <div class="workflow">
+            <h3>Scenario: Executive wants to model potential savings</h3>
+            
+            <div class="step">
+                <strong>Step 1:</strong> Go to <code>Network Executive</code> tab
+            </div>
+            
+            <div class="step">
+                <strong>Step 2:</strong> Scroll to "What-If Savings Scenario" section
+            </div>
+            
+            <div class="step">
+                <strong>Step 3:</strong> Move "Target Rate Reduction" slider to 8%
+            </div>
+            
+            <div class="step">
+                <strong>Step 4:</strong> Select "All High-Cost Outliers" from dropdown
+            </div>
+            
+            <div class="step">
+                <strong>Step 5:</strong> Choose "Q1 2026" implementation timeline
+            </div>
+            
+            <div class="step">
+                <strong>Step 6:</strong> Click <code>Calculate Impact</code> button
+            </div>
+            
+            <div class="step">
+                <strong>Step 7:</strong> Watch results animate:
+                <ul>
+                    <li>Projected Annual Savings: $13.2M</li>
+                    <li>PMPM Reduction: $38.64</li>
+                    <li>Market Position: 0.5% below market</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>🔄 Key Integration Features to Try</h2>
+        
+        <div class="demo-grid">
+            <div class="demo-card">
+                <h3>🔄 Sync Button</h3>
+                <p>Click sync button in header → All dashboards update in real-time</p>
+            </div>
+            
+            <div class="demo-card">
+                <h3>👤 Role Switcher</h3>
+                <p>User dropdown → Select different role → Auto-switches to that tab</p>
+            </div>
+            
+            <div class="demo-card">
+                <h3>📤 Export Options</h3>
+                <p>Each tab has PDF/Excel/PPT buttons → Export with current filters</p>
+            </div>
+            
+            <div class="demo-card">
+                <h3>☑️ Bulk Selection</h3>
+                <p>Check multiple providers → Click "Send Selected to Contracting (0)"</p>
+            </div>
+            
+            <div class="demo-card">
+                <h3>🔍 CPT Drill-Down</h3>
+                <p>Contracting tab → Expand arrow next to provider → See CPT codes</p>
+            </div>
+            
+            <div class="demo-card">
+                <h3>📊 Chart Switching</h3>
+                <p>Contracting tab → Rate charts → Toggle between Comparison/Volume/Savings</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>⚡ Quick Tips</h2>
+        
+        <div class="warning">
+            <strong>💡 Pro Tip:</strong> Use the sidebar filters to narrow down data, then use the "Apply Filters" button to update all views simultaneously.
+        </div>
+        
+        <ul>
+            <li><strong>Live Indicator:</strong> Green "● LIVE" means real-time sync is active</li>
+            <li><strong>Notification Badges:</strong> Red numbers show pending actions (messages, flags, approvals)</li>
+            <li><strong>Hover Tooltips:</strong> Hover over <code>ⓘ</code> icons for explanations</li>
+            <li><strong>Color Codes:</strong>
+                <ul>
+                    <li>🟢 Green = Good performance / Below market rate</li>
+                    <li>🟡 Amber = Moderate concern / Acceptable variance</li>
+                    <li>🔴 Red = Critical issue / High cost alert</li>
+                </ul>
+            </li>
+            <li><strong>Collapsible Sidebar:</strong> Click arrow button to hide/show filter panel</li>
+            <li><strong>Context Chips:</strong> In Contracting tab, see "From: Network Manager" to know source</li>
+        </ul>
+    </div>
+
+    <div class="demo-section">
+        <h2>🎯 Complete User Journey Example</h2>
+        
+        <div class="workflow">
+            <h3>Full workflow: Identify outlier → Analyze → Negotiate → Approve</h3>
+            
+            <div class="step">
+                <strong>Executive (Day 1, 9:00 AM):</strong>
+                <p>Logs in → Reviews KPIs → Sees "Avg Rate vs Market: 8.5% Above" (RED) → Opens "Top Outlier Systems" table → Identifies Metro Health with +14.1% variance → Wants details</p>
+            </div>
+            
+            <div class="step">
+                <strong>Executive → Manager (9:05 AM):</strong>
+                <p>Switches to Manager tab (inherits filters) → Reviews Metro Health performance: Quality 4.2/5, Members 45,230 → Sees strong provider but high cost → Decides to flag for negotiation</p>
+            </div>
+            
+            <div class="step">
+                <strong>Manager → Contracting (9:10 AM):</strong>
+                <p>Selects Metro Health in outlier table → Clicks "Send to Contracting Team" → Adds note: "High volume, negotiate 8-10% reduction" → Notification sent</p>
+            </div>
+            
+            <div class="step">
+                <strong>Contracting receives (9:11 AM):</strong>
+                <p>Sees notification badge (1) → Opens Collaboration Panel → Clicks "Review Flags" → Sees Metro Health with Manager's note → Clicks "Begin Negotiation"</p>
+            </div>
+            
+            <div class="step">
+                <strong>Contracting analyzes (Day 1-2):</strong>
+                <p>Expands CPT details → Identifies 3 high-variance procedures → Runs volume-weighted analysis: $1.8M annual impact → Creates negotiation packet (PPT + Excel)</p>
+            </div>
+            
+            <div class="step">
+                <strong>Contracting → Executive (Day 3):</strong>
+                <p>Completes proposal: 9% rate reduction → Projected savings $1.65M → Clicks "Request Executive Approval" → Attaches market analysis → Executive receives in Approvals tab</p>
+            </div>
+            
+            <div class="step">
+                <strong>Executive approves (Day 3):</strong>
+                <p>Reviews proposal in Approvals tab → Runs What-If scenario to verify savings → Satisfied with analysis → Clicks "Approve" → Contracting receives notification</p>
+            </div>
+            
+            <div class="step">
+                <strong>Contracting executes (Day 4+):</strong>
+                <p>Proceeds with negotiation → Updates progress stages → Adds meeting notes → Success: 8.5% reduction agreed → Updates audit trail → All dashboards reflect new rate</p>
+            </div>
+        </div>
+        
+        <p><strong>Result:</strong> Collaborative workflow across 3 roles → $1.53M annual savings → Full audit trail → Seamless integration!</p>
+    </div>
+
+    <div class="demo-section">
+        <h2>📚 Additional Resources</h2>
+        <ul>
+            <li><a href="README.md" class="button-demo">Full Documentation</a></li>
+            <li><a href="INTEGRATION_GUIDE.md" class="button-demo">Integration Guide</a></li>
+            <li><a href="index.html" class="button-demo">Open Dashboard</a></li>
+        </ul>
+    </div>
+
+    <div class="demo-section" style="background: #1e40af; color: white;">
+        <h2 style="color: white; border-color: white;">🎉 You're Ready!</h2>
+        <p>You now understand the key integration features. Open the dashboard and start exploring!</p>
+        <a href="index.html" class="button-demo" style="background: white; color: #1e40af;">Launch Dashboard →</a>
+    </div>
+</body>
+</html>
