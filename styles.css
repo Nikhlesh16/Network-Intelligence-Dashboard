@@ -43,13 +43,13 @@
     --neutral-gray-800: #1e293b;
     --neutral-gray-900: #0f172a;
     
-    /* Spacing */
-    --spacing-xs: 0.25rem;
-    --spacing-sm: 0.5rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 1.5rem;
-    --spacing-xl: 2rem;
-    --spacing-2xl: 3rem;
+    /* Spacing - Compact */
+    --spacing-xs: 0.15rem;
+    --spacing-sm: 0.25rem;
+    --spacing-md: 0.4rem;
+    --spacing-lg: 0.6rem;
+    --spacing-xl: 0.8rem;
+    --spacing-2xl: 1rem;
     
     /* Border Radius */
     --radius-sm: 0.25rem;
@@ -63,15 +63,15 @@
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     
-    /* Typography */
+    /* Typography - Compact */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --font-size-xs: 0.75rem;
-    --font-size-sm: 0.875rem;
-    --font-size-base: 1rem;
-    --font-size-lg: 1.125rem;
-    --font-size-xl: 1.25rem;
-    --font-size-2xl: 1.5rem;
-    --font-size-3xl: 1.875rem;
+    --font-size-xs: 0.65rem;
+    --font-size-sm: 0.75rem;
+    --font-size-base: 0.85rem;
+    --font-size-lg: 0.95rem;
+    --font-size-xl: 1rem;
+    --font-size-2xl: 1.1rem;
+    --font-size-3xl: 1.25rem;
 }
 
 body {
@@ -79,7 +79,7 @@ body {
     font-size: var(--font-size-base);
     color: var(--neutral-gray-800);
     background-color: var(--neutral-gray-50);
-    line-height: 1.6;
+    line-height: 1.4;
     overflow-x: hidden;
 }
 
@@ -274,25 +274,25 @@ body {
     display: flex;
     max-width: 1920px;
     margin: 0 auto;
-    min-height: calc(100vh - 200px);
+    min-height: calc(100vh - 100px);
 }
 
 /* ============= Sidebar ============= */
 .sidebar {
-    width: 320px;
+    width: 280px;
     background: white;
     border-right: 1px solid var(--neutral-gray-200);
-    padding: var(--spacing-xl);
+    padding: var(--spacing-md);
     position: sticky;
-    top: 145px;
-    height: calc(100vh - 145px);
+    top: 80px;
+    height: calc(100vh - 80px);
     overflow-y: auto;
     transition: all 0.3s ease;
 }
 
 .sidebar.collapsed {
-    width: 60px;
-    padding: var(--spacing-md);
+    width: 50px;
+    padding: var(--spacing-sm);
 }
 
 .sidebar.collapsed .sidebar-content {
@@ -328,17 +328,17 @@ body {
 .filter-section h3,
 .quick-links h3,
 .data-status h3 {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-base);
     font-weight: 600;
     color: var(--neutral-gray-800);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
     display: flex;
     align-items: center;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-xs);
 }
 
 .filter-group {
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
 }
 
 .filter-group label {
@@ -526,34 +526,34 @@ body {
 /* ============= KPI Grid ============= */
 .kpi-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-2xl);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
 }
 
 .kpi-card {
     background: white;
-    border-radius: var(--radius-lg);
-    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
     box-shadow: var(--shadow-md);
     transition: all 0.3s ease;
     border: 1px solid var(--neutral-gray-200);
 }
 
 .kpi-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
 .kpi-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
 }
 
 .kpi-header h3 {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-base);
     font-weight: 600;
     color: var(--neutral-gray-800);
 }
@@ -569,12 +569,12 @@ body {
 }
 
 .kpi-value {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
 }
 
 .kpi-value .value {
     display: block;
-    font-size: var(--font-size-3xl);
+    font-size: var(--font-size-2xl);
     font-weight: 700;
     color: var(--neutral-gray-900);
     margin-bottom: var(--spacing-xs);
@@ -582,7 +582,7 @@ body {
 
 .kpi-value .label {
     display: block;
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
     color: var(--neutral-gray-600);
 }
 
@@ -5457,5 +5457,71 @@ body {
     .diversification-metrics {
         grid-template-columns: 1fr;
     }
+}
+
+/* ============= COMPACT OVERRIDE STYLES ============= */
+/* Hide sidebar and collaboration panel by default for compact view */
+.sidebar {
+    display: none;
+}
+
+.collaboration-panel {
+    display: none;
+}
+
+.chart-container {
+    min-height: 250px !important;
+    padding: var(--spacing-md) !important;
+}
+
+.heatmap-container {
+    min-height: 300px !important;
+    padding: var(--spacing-md) !important;
+}
+
+.us-map-wrapper {
+    min-height: 300px !important;
+}
+
+.dashboard-section {
+    margin-bottom: var(--spacing-lg) !important;
+}
+
+.section-header {
+    margin-bottom: var(--spacing-sm) !important;
+}
+
+.section-header h2 {
+    font-size: var(--font-size-xl) !important;
+}
+
+.dashboard-grid {
+    gap: var(--spacing-md) !important;
+}
+
+.metric-card {
+    padding: var(--spacing-md) !important;
+}
+
+.data-table {
+    font-size: var(--font-size-sm) !important;
+}
+
+.data-table th,
+.data-table td {
+    padding: var(--spacing-sm) !important;
+}
+
+.main-content {
+    padding: var(--spacing-md) !important;
+}
+
+.dashboard-header {
+    padding: var(--spacing-sm) var(--spacing-md) !important;
+}
+
+.dashboard-footer {
+    padding: var(--spacing-sm) !important;
+    font-size: var(--font-size-xs) !important;
 }
 
