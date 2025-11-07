@@ -691,6 +691,7 @@ function initializeSavingsPotentialChart() {
 function initializeTabs() {
     const tabButtons = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
+    const sidebar = document.getElementById('sidebar');
 
     tabButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -703,6 +704,13 @@ function initializeTabs() {
             // Add active class to clicked tab and corresponding content
             this.classList.add('active');
             document.getElementById(`${tabName}-tab`).classList.add('active');
+            
+            // Hide sidebar for pipeline tab, show for others
+            if (tabName === 'pipeline') {
+                sidebar.style.display = 'none';
+            } else {
+                sidebar.style.display = 'block';
+            }
         });
     });
 }

@@ -3042,6 +3042,29 @@ body {
    DATA INTELLIGENCE PIPELINE STYLES
    ============================================ */
 
+/* Hide sidebar when pipeline tab is active */
+#pipeline-tab.active ~ #sidebar,
+.tab-content#pipeline-tab.active ~ .sidebar {
+    display: none !important;
+}
+
+/* Adjust main content width when pipeline tab is active */
+#pipeline-tab.active {
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Ensure pipeline takes full width when active */
+.dashboard-container:has(#pipeline-tab.active) .sidebar {
+    display: none !important;
+}
+
+.dashboard-container:has(#pipeline-tab.active) .main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+}
+
 /* Pipeline Header */
 .pipeline-header {
     background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
